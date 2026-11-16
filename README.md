@@ -56,14 +56,17 @@ npm run test:api
 
 ## 安装包
 
-本地安装包位于 `public/downloads/PackAgent-Setup-0.1.4-win-x64.exe`，已登记并
-发布到数据库，下载区会通过受控接口记录下载次数。
+`v0.1.4` 安装包已上传到 GitHub Releases：
+
+- Release：https://github.com/germansparrow95-bit/packagent-website/releases/tag/v0.1.4
+- 下载：https://github.com/germansparrow95-bit/packagent-website/releases/download/v0.1.4/PackAgent-Setup-0.1.4-win-x64.exe
 
 - 文件大小：338,491,349 bytes
 - SHA256：`DCCB5C7087052FBFDACB7E60D58D1B4CB5F935F2496BDDF6495CFDD517B46B16`
 - Authenticode：未签名
 
-替换安装包后运行：
+本地仍保留一份 `public/downloads/PackAgent-Setup-0.1.4-win-x64.exe` 用于验证，
+但数据库中的正式下载地址已指向 GitHub Release。替换安装包后运行：
 
 ```powershell
 npm run installer:publish-local -- "public/downloads/新的安装包.exe"
