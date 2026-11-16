@@ -1,0 +1,38 @@
+{
+  "name": "packagent-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "qa": "node scripts/qa-screenshots.mjs",
+    "og": "node scripts/generate-og.mjs",
+    "test:api": "node scripts/smoke-api.mjs",
+    "db:init": "node --env-file-if-exists=.env.local scripts/init-db.mjs",
+    "installer:publish-local": "node --env-file-if-exists=.env.local scripts/publish-local-installer.mjs",
+    "db:generate": "drizzle-kit generate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "@react-three/fiber": "9.8.2",
+    "drizzle-orm": "^0.45.4",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "^0.0.1",
+    "three": "0.187.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/three": "^0.187.0",
+    "drizzle-kit": "^0.31.11",
+    "playwright-core": "^1.65.0",
+    "typescript": "^5.9.3"
+  }
+}
